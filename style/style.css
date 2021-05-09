@@ -5,63 +5,73 @@
 }
 
 :root {
---Strong-Cyan: hsl(171, 66%, 44%);
---Light-Blue: hsl(233, 100%, 69%);
---Dark-Grayish-Blue: hsl(210, 10%, 33%);
---Grayish-Blue: hsl(201, 11%, 66%);
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
 }
 
 body {
-  font-family: Bai Jamjuree, sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 1.125rem;
   text-align: center;
 }
 
 section {
-  padding: 30px 0;
+  padding: 1.875rem 0;
 }
 
 header {
-  width: 100;
-  background-image: url("/images/bg-header-desktop.png");
+  width: 100%;
+  background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 header h1 {
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 }
+
 header img {
-  width: 6.25rem;
+  width: 7rem;
   padding-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 img {
   max-width: 100%;
 }
 
+.img-comp {
+  margin-left: -8rem;
+}
+
 /*Typography*/
 
-h1, h2, h3, h4 {
-  color: var(--Dark-Grayish-Blue);
+h1,
+h2,
+h3,
+h4 {
+  color: var(--dark-grayish-blue);
 }
 
 p {
-  color: var(--Grayish-Blue);
+  color: var(--grayish-blue);
 }
- 
+
 article {
-  padding: 8rem;
+  padding: 12rem;
   text-align: left;
 }
 
 article h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 1rem;
 }
 
 article p {
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* section-snipper*/
@@ -86,7 +96,7 @@ article p {
   width: 50rem;
 }
 
-.access p{
+.access p {
   margin-bottom: 5rem;
 }
 
@@ -95,7 +105,7 @@ article p {
 }
 
 .logos {
- max-width: 65rem;
+  max-width: 65rem;
 }
 
 .workflow {
@@ -104,7 +114,7 @@ article p {
 
 .workflow p {
   padding-top: 1rem;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .workflow-icons div {
@@ -123,7 +133,7 @@ article p {
 
 /* Buttons*/
 .btn {
-  font-family: Bai Jamjuree, sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   margin: 3rem 0.5rem;
@@ -135,78 +145,88 @@ article p {
 }
 
 .btn-ios {
-  background-color: var(--Strong-Cyan);
+  background-color: var(--strong-cyan);
 }
 
 .btn-mac {
-  background-color: var(--Light-Blue);
+  background-color: var(--light-blue);
 }
 
 .btn-ios:hover {
-  box-shadow: 0px 19px 36px -10px var(--Strong-Cyan);
+  box-shadow: 7px 10px 17px -8px var(--strong-cyan);
+  transition: box-shadow 0.4s;
 }
 
 .btn-mac:hover {
-  box-shadow: 0px 19px 36px -10px var(--Light-Blue);
+  box-shadow: 7px 10px 17px -8px var(--light-blue);
+  transition: box-shadow 0.4s;
 }
 
 /* Footer*/
 
 footer {
   height: 8rem;
+  width: 100%;
+  padding: 3rem;
   background-color: rgb(239, 239, 245);
 }
 
 footer img {
   width: 50px;
-  margin-left: 100px;
+  margin-left: 10rem;
 }
 
 footer ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  max-width: 23rem;
+  max-width: 29rem;
+  margin-left: 1rem;
 }
 
 footer ul li {
-  padding: 9px;
+  padding: 0.5625rem;
   display: flex;
   flex-wrap: wrap;
   margin-right: 1.25rem;
 }
 
 footer ul li a {
-  color: var(--Grayish-Blue);
+  color: var(--grayish-blue);
   text-decoration: none;
 }
 
 footer a:hover {
-  color:var(--Strong-Cyan);
+  color: var(--strong-cyan);
+}
+
+.social-icons {
+  margin-right: 10rem;
 }
 
 .social-icons i {
-  color: var(--Dark-Grayish-Blue);
+  color: var(--dark-grayish-blue);
   font-size: 2rem;
-  width: 25px;
-  margin: 20px;
+  width: 1.5625rem;
+  margin: 1.25rem;
 }
 
 .social-icons i:hover {
-  color:var(--Strong-Cyan);
+  color: var(--strong-cyan);
+  transition: 0.3s;
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 500px) {
 
   body {
     font-size: 1.4rem;
   }
 
   header {
-    background-image: url("/images/bg-header-mobile.png");
+    background-image: url("../images/bg-header-mobile.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width:40rem;
+    width: 40rem;
   }
 
   header img {
@@ -215,11 +235,15 @@ footer a:hover {
   }
 
   .container {
-    width: 39rem;
+    width: 40rem;
     padding: 4.5rem;
   }
 
-  .logos  div{
+  .img-comp {
+    margin-left: 0;
+  }
+
+  .logos div {
     margin-bottom: 5rem;
   }
 
@@ -259,23 +283,27 @@ footer a:hover {
 
   footer {
     height: 100%;
+    width: 40rem;
   }
 
-  footer ul{
+  footer ul {
     flex-direction: column;
   }
 
   footer ul li {
     justify-content: center;
     align-content: center;
-    padding-left: 40px;
-    
+    padding-left: 2.5rem;
   }
 
-  footer img{
+  footer img {
     width: 5rem;
     margin: 0;
-    padding-bottom: 20px;
-    padding-left: 10px;
+    padding-bottom: 1.25rem;
+    padding-left: 0.625rem;
+  }
+
+  .social-icons {
+    margin: 0;
   }
 }
